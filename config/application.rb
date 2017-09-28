@@ -24,3 +24,7 @@ module ClarifyLandingPage
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
+
+Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
+  config.assets.paths << path
+end
